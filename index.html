@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+หมายเลขคิว <input type="text" id="_number" value="001"/>
+<button type="button" onclick="callpa()" id='btn1'>เรียกคิว</button>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script>
+function callpa(){
+    let q =  document.getElementById("_number").value;
+    responsiveVoice.speak("คิวหมายเลข "+q+" เชิญเข้าห้องตรวจค่ะ", "Thai Female");
+    document.getElementById('btn1').disabled = true; 
+   let toogleb =  setInterval(disb,5000);
+    function disb(){
+        document.getElementById('btn1').disabled = false;
+        clearInterval(toogleb);
+    }
+}
+
+</script>
+</body>
+</html>
